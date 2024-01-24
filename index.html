@@ -154,41 +154,50 @@
             <hr class="hr-border mb-10">
 
             <!-- Program Section -+ Card Part  -->
-            <div class="program-section-cards flex flex-wrap gap-4">
-                <div class="program-section-card-contents flex gap-4 flex-col w-full lg:flex-row">
+            <div class="program-section-cards flex flex-wrap gap-4 ">
+                <div class="program-section-card-contents flex gap-4 flex-col w-full  sm:flex-row">
                     <div class="program-section-card grid flex-grow h-full card rounded-box place-items-center">
-                        <div class="card w-full bg-base-100 shadow-xl image-full">
-                            <figure class="w-full h-full"><img class="w-full h-full" src="./Images/program-1.png" alt="" /></figure>
-                            <div class="card-body">
-                              <h2 class="card-title">Junior Program</h2>
-                              <p>Empower young talents with our Junior Program at the Hockey Club, providing a nurturing environment to develop skills, foster teamwork, and ignite a passion for the sport.</p>
-                              <div class="card-actions">
-                                <button class="btn btn-primary">Buy Now</button>
-                              </div>
+                        <div class="card w-full bg-base-100 shadow-xl image-full lg:h-[550px]">
+                            <figure class="w-full h-full"><img class="w-full h-full" src="./Images/program-1.png " alt="" /></figure>
+                            <div class="card-body flex-wrap flex-col">
+                                <div class="flex-wrap flex-col mt-[10%]">
+                                    <h2 class="my-[2%] font-bold 
+                                    text-2xl text-white">Junior Program</h2>
+                                    <p class="my-[2%] mr-[8%]">Empower young talents with our Junior Program at the Hockey Club, providing a nurturing environment to develop skills, foster teamwork, and ignite a passion for the sport.</p>
+                                    <div class="card-actions">
+                                        <button class="btn btn-primary px-10 bg-red-700 border-none">Register Now!</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="program-section-card grid flex-grow h-full card rounded-box place-items-center">
-                        <div class="card w-full bg-base-100 shadow-xl image-full">
-                            <figure class="w-full h-"><img class="w-full h-" src="./Images/program-2.png" alt="" /></figure>
+                        <div class="card w-full bg-base-100 shadow-xl image-full lg:h-[550px]">
+                            <figure class="w-full h-[100%]"><img class="w-full h-[100%]" src="./Images/program-2.png" alt="" /></figure>
                             <div class="card-body">
-                              <h2 class="card-title">Teenager Program</h2>
-                              <p>Elevate your skills and passion for hockey with our specially curated Teenager Program, designed to nurture young talents and foster a love for the game.</p>
-                              <div class="card-actions">
-                                <button class="btn btn-primary">Buy Now</button>
+                              <div class="flex-wrap flex-col mt-[10%]">
+                                <h2 class="my-[2%] font-bold 
+                                text-2xl text-white">Teenager Program</h2>
+                                    <p class="my-[2%] mr-[8%]">Elevate your skills and passion for hockey with our specially curated Teenager Program, designed to nurture young talents and foster a love for the game.</p>
+                                    <div class="card-actions">
+                                        <button class="btn btn-primary px-10 bg-red-700 border-none">Register Now!</button>
+                                    </div>
                               </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="program-section-card grid flex-grow h-full card rounded-box place-items-center">
-                    <div class="card w-full bg-base-100 shadow-xl image-full">
-                        <figure><img src="./Images/program-3.png" alt="" /></figure>
+                    <div class="card w-full bg-base-100 shadow-xl image-full lg:h-[600px]">
+                        <figure class="w-full h-[100%]"><img class="w-full h-[100%]" src="./Images/program-3.png" alt="" /></figure>
                         <div class="card-body">
-                          <h2 class="card-title">Professional Program</h2>
-                          <p>Elevate your game with our Professional Program at the Hockey Club, where elite coaching and tailored training propel players to new heights of skill and success.</p>
-                          <div class="card-actions">
-                            <button class="btn btn-primary">Buy Now</button>
+                          <div class="flex-wrap flex-col lg:mt-[20%] lg:w-[50%] mt-[10%]">
+                                <h2 class="my-[2%] font-bold 
+                                text-2xl text-white">Professional Program</h2>
+                                <p class="my-[2%] ">Elevate your game with our Professional Program at the Hockey Club, where elite coaching and tailored training propel players to new heights of skill and success.</p>
+                                <div class="card-actions">
+                                    <button class="btn btn-primary px-10 bg-red-700 border-none">Register Now!</button>
+                                </div>
                           </div>
                         </div>
                     </div>
@@ -196,20 +205,23 @@
             </div>
         </section>
 
+        <!-- Product Section -->
         <section class="new-products-section">
             <hr class="hr-border my-12">
             <div class="program-section-contents flex flex-wrap flex-col items-center text-center">
                 <h1 class="text-4xl font-semibold">Our New Products</h1>
                 <p class="w-[50%] my-5 font-normal text-slate-700">Discover our latest arrivals cutting-edge equipment and gear designed to elevate your game. From innovative sticks to high-performance jerseys, gear up with our new products and step onto the ice with confidence.</p>
             </div>
-            <hr class="hr-border">
-            <div class="new-product-cards">
-                <div class="new-product-card border-orange-600 rounded-lg">
-                    <div class="card card-side bg-base-100 shadow-xl  ">
+            <hr class="hr-border mx-4">
+
+            <!-- Product Section -+ Cards -->
+            <div class="new-product-cards flex flex-wrap flex-col lg:flex-row gap-4 mt-12">
+                <div class="new-product-card border-orange-600 rounded-lg lg:basis-[49.5%]">
+                    <div class="card card-side bg-base-100 shadow-xl  p-4 border-2">
                         <figure><img src="./Images/jacket.png" alt="jacket"/></figure>
                         <div class="card-body">
                             <div class="new-product-top-icons">
-                                <div class="rating">
+                                <div class="rating flex">
                                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
                                     <p> 5.0</p>
                                     <span class="material-symbols-outlined">visibility</span>
@@ -218,21 +230,21 @@
                                     <p> 200</p>
                                 </div>
                             </div>
-                            <h2 class="card-title">Red Jacket V-type</h2>
-                            <p>New jacket arrive. </p>
-                            <div class="card-footer">
-                                <p>Price - $22.00</p>
+                            <h2 class="card-title text-2xl font-semibold">Red Jacket V-type</h2>
+                            <p class="font-normal text-slate-700">New jacket arrive. </p>
+                            <div class="card-footer flex">
+                                <p class="text-red-500 font-bold">Price - $22.00</p>
                                 <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="new-product-card border-orange-600 rounded-lg">
-                    <div class="card card-side bg-base-100 shadow-xl  ">
+                <div class="new-product-card border-orange-600 rounded-lg lg:basis-[49.5%]">
+                    <div class="card card-side bg-base-100 shadow-xl  p-4 border-2">
                         <figure><img src="./Images/player-prize.png" alt="jacket"/></figure>
                         <div class="card-body">
                             <div class="new-product-top-icons">
-                                <div class="rating">
+                                <div class="rating flex">
                                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
                                     <p> 5.0</p>
                                     <span class="material-symbols-outlined">visibility</span>
@@ -241,21 +253,21 @@
                                     <p> 200</p>
                                 </div>
                             </div>
-                            <h2 class="card-title">Player Prize</h2>
-                            <p>New jacket arrive. </p>
-                            <div class="card-footer">
-                                <p>Price - $22.00</p>
+                            <h2 class="card-title text-2xl font-semibold">Player Prize</h2>
+                            <p class="font-normal text-slate-700">New prize arrive. </p>
+                            <div class="card-footer flex">
+                                <p class="text-red-500 font-bold">Price - $22.00</p>
                                 <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="new-product-card border-orange-600 rounded-lg">
-                    <div class="card card-side bg-base-100 shadow-xl  ">
+                <div class="new-product-card border-orange-600 rounded-lg lg:basis-[49.5%]">
+                    <div class="card card-side bg-base-100 shadow-xl  p-4 border-2">
                         <figure><img src="./Images/cap.png" alt="jacket"/></figure>
                         <div class="card-body">
                             <div class="new-product-top-icons">
-                                <div class="rating">
+                                <div class="rating flex">
                                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
                                     <p> 5.0</p>
                                     <span class="material-symbols-outlined">visibility</span>
@@ -264,21 +276,21 @@
                                     <p> 200</p>
                                 </div>
                             </div>
-                            <h2 class="card-title">Cap</h2>
-                            <p>New jacket arrive. </p>
-                            <div class="card-footer">
-                                <p>Price - $22.00</p>
+                            <h2 class="card-title text-2xl font-semibold">Cap</h2>
+                            <p class="font-normal text-slate-700">New cap arrive. </p>
+                            <div class="card-footer flex">
+                                <p class="text-red-500 font-bold">Price - $22.00</p>
                                 <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="new-product-card border-orange-600 rounded-lg">
-                    <div class="card card-side bg-base-100 shadow-xl ">
+                <div class="new-product-card border-orange-600 rounded-lg lg:basis-[49.5%]">
+                    <div class="card card-side bg-base-100 shadow-xl p-4 border-2">
                         <figure><img src="./Images/jersey.png" alt="jacket"/></figure>
                         <div class="card-body">
                             <div class="new-product-top-icons">
-                                <div class="rating">
+                                <div class="rating flex">
                                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
                                     <p> 5.0</p>
                                     <span class="material-symbols-outlined">visibility</span>
@@ -287,21 +299,21 @@
                                     <p> 200</p>
                                 </div>
                             </div>
-                            <h2 class="card-title">Player Jersey</h2>
-                            <p>New jacket arrive. </p>
-                            <div class="card-footer">
-                                <p>Price - $22.00</p>
+                            <h2 class="card-title text-2xl font-semibold">Player Jersey</h2>
+                            <p class="font-normal text-slate-700">New jersy arrive. </p>
+                            <div class="card-footer flex">
+                                <p class="text-red-500 font-bold">Price - $22.00</p>
                                 <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="new-product-card border-orange-600 rounded-lg">
-                    <div class="card card-side bg-base-100 shadow-xl  ">
+                <div class="new-product-card border-orange-600 rounded-lg lg:basis-[49.5%]">
+                    <div class="card card-side bg-base-100 shadow-xl  p-4 border-2">
                         <figure><img src="./Images/player-helmet.png" alt="jacket"/></figure>
                         <div class="card-body">
                             <div class="new-product-top-icons">
-                                <div class="rating">
+                                <div class="rating flex">
                                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
                                     <p> 5.0</p>
                                     <span class="material-symbols-outlined">visibility</span>
@@ -310,21 +322,21 @@
                                     <p> 200</p>
                                 </div>
                             </div>
-                            <h2 class="card-title">Keeper Helmet</h2>
-                            <p>New jacket arrive. </p>
-                            <div class="card-footer">
-                                <p>Price - $22.00</p>
+                            <h2 class="card-title text-2xl font-semibold">Keeper Helmet</h2>
+                            <p class="font-normal text-slate-700">New helmet arrive. </p>
+                            <div class="card-footer flex">
+                                <p class="text-red-500 font-bold">Price - $22.00</p>
                                 <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="new-product-card border-orange-600 rounded-lg">
-                    <div class="card card-side bg-base-100 shadow-xl  ">
+                <div class="new-product-card border-orange-600 rounded-lg lg:basis-[49.5%]">
+                    <div class="card card-side bg-base-100 shadow-xl  p-4 border-2">
                         <figure><img src="./Images/football.png" alt="jacket"/></figure>
                         <div class="card-body">
                             <div class="new-product-top-icons">
-                                <div class="rating">
+                                <div class="rating flex ">
                                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
                                     <p> 5.0</p>
                                     <span class="material-symbols-outlined">visibility</span>
@@ -333,10 +345,10 @@
                                     <p> 200</p>
                                 </div>
                             </div>
-                            <h2 class="card-title">Football</h2>
-                            <p>New jacket arrive. </p>
-                            <div class="card-footer">
-                                <p>Price - $22.00</p>
+                            <h2 class="card-title text-2xl font-semibold">Football</h2>
+                            <p class="font-normal text-slate-700">New football arrive. </p>
+                            <div class="card-footer flex">
+                                <p class="text-red-500 font-bold">Price - $22.00</p>
                                 <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
                             </div>
                         </div>
@@ -345,7 +357,7 @@
             </div>
         </section>
 
-
+        <!-- Client Question Section -->
         <section class="client-question-section">
             <hr class="hr-border my-12">
             <div class="program-section-contents program-section-contents flex flex-wrap flex-col items-center text-center">
@@ -353,10 +365,10 @@
                 <p class="w-[50%] my-5 font-normal text-slate-700">Our Hockey Club values and prioritizes client satisfaction, ensuring a positive and rewarding experience for every player. We welcome feedback and strive to continuously enhance our services to meet the needs of our valued clients.</p>
             </div>
             <hr class="hr-border">
-            <div class="client-question-container bg-base-200 mt-10">
-                <div class="card lg:card-side shadow-xl">
-                    <figure><img src="./Images/question.png" alt="Album"/></figure>
-                    <div class="card-body">
+            <div class="client-question-container bg-base-200 mt-10  ">
+                <div class="card lg:card-side shadow-xl flex flex-wrap flex-col lg:flex-row p-4 border-2 ">
+                    <figure class="basis-[40%]"><img src="./Images/question.png" alt="Album"/></figure>
+                    <div class="card-body basis-[55%]">
                         <div class="collapse collapse-plus ">
                             <input type="radio" name="my-accordion-3" checked="checked" /> 
                             <div class="collapse-title text-xl font-medium">
@@ -419,17 +431,17 @@
 
 
         <section class="get-in-touch-section">
-            <hr class="hr-border">
-            <div class="program-section-contents">
-                <h1>Get In Touch</h1>
-                <p>Connect with our Hockey Club to explore exciting opportunities, discuss partnerships, or address any inquiries. We're dedicated to fostering collaboration and engagement within the hockey community.</p>
+            <hr class="hr-border my-12">
+            <div class="program-section-contents flex flex-wrap flex-col items-center text-center">
+                <h1 class="text-4xl font-semibold">Get In Touch</h1>
+                <p class="w-[50%] my-5 font-normal text-slate-700">Connect with our Hockey Club to explore exciting opportunities, discuss partnerships, or address any inquiries. We're dedicated to fostering collaboration and engagement within the hockey community.</p>
             </div>
             <hr class="hr-border">
 
             <div class="hero min-h-screen bg-base-200">
-                <div class="hero-content flex-col lg:flex-row">
-                  <div class="text-center lg:text-left">
-                    <div class="card lg:card-side shadow-xl">
+                <div class="hero-content flex-col lg:flex-row ">
+                  <div class="text-center lg:text-left lg:flex-wrap">
+                    <div class="card lg:card-side shadow-xl ">
                         <div class="get-in-touch-left p-6">
                             <div class="get-in-touch-contact">
                                 <img src="./Images/call-icon.png" alt="">
@@ -506,9 +518,9 @@
 
     </main>
 
-    <footer class="footer p-14 bg-slate-900	text-white text-base-content">
-        <aside >
-          <h1>Get In Touch</h1>
+    <footer class="footer p-14 bg-slate-900	text-white text-base-content flex items-center  gap-20">
+        <aside class="flex flex-col gap-5 10 w-[50%]">
+          <h1 class="text-2xl font-semibold">Get In Touch</h1>
           <p >Connect with our Hockey Club to explore exciting opportunities, discuss partnerships, or address any inquiries. We're dedicated to fostering collaboration and engagement within the hockey community.</p>
           <div class="footer-email flex gap-2">
             <span class="material-symbols-outlined text-red-700 ">mail</span>
@@ -520,7 +532,7 @@
           </div>
         </aside> 
         <nav>
-          <header class="">Company</header> 
+          <header class="footer-title">Company</header> 
           <a class="link link-hover">About us</a>
           <a class="link link-hover">Leadership</a>
           <a class="link link-hover">Careers</a>
@@ -528,7 +540,7 @@
           <a class="link link-hover">Legal Notice</a>
         </nav> 
         <nav>
-          <header class="">Support</header> 
+          <header class="footer-title">Support</header> 
           <a class="link link-hover">Help Center</a>
           <a class="link link-hover">FAQ</a>
           <a class="link link-hover">Ticket Support</a>
