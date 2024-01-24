@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Hockey Club</title>
+
+    <!-- Tailwind and DaisyUI link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <!-- Google icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- Custom CSS -->
+    <style>
+        /*
+        .navbar-items{
+            display: flex;
+            justify-content: space-between;
+        }*/
+        .hr-border{
+            border: 1px dashed #e0e0e0;
+            size: 6;
+        }
+        .active{
+            color: #fa0000 !important;
+            background: none!important;
+        }
+    </style>
+
+</head>
+
+<body class="lg:mx-20 mt-5">
+
+    <!-- Navbar -->
+    <nav>
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <!-- Small screen menu start -->
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+                <!-- Small screen menu end -->
+
+              <!-- Apostrophe is not showing -->
+              <a ><span style="color: #fa0000; gap:0" class="text-2xl">Dream</span> <span class="font-normal">Hockey</span></a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1 ">
+                <li><a href="#" class="active ">Home</a></li>
+                <li><a href="#" >About</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+                <!-- Overlap for Mobile-s -->
+                <button class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                </button>
+                <a class="btn bg-[#FF4240] text-slate-50">Get Ticket</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Banner Section -->
+        <section class="body-banner-section">
+            <!-- <div class="banner-content bg-black text-white h-[10%] w-[20%] p-[2%]">
+                <h2>Meet all the heroes from the field</h2>
+                <p>Here is our heros.</p>
+            </div> -->
+            <div class="carousel w-full">
+                <div id="slide1" class="carousel-item relative w-full h-[700px]">
+                  <img src="./Images/banner.png" class="w-full" />
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide4" class="btn btn-circle">❮</a> 
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                  </div>
+                </div> 
+                <div id="slide2" class="carousel-item relative w-full h-[700px]">
+                  <img src="./Images/program-2.png" class="w-full" />
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" class="btn btn-circle">❮</a> 
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                  </div>
+                </div> 
+                <div id="slide3" class="carousel-item relative w-full h-[700px]">
+                  <img src="./Images/program-3.png" class="w-full" />
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle">❮</a> 
+                    <a href="#slide1" class="btn btn-circle">❯</a>
+                  </div>
+                </div> 
+              </div>
+        </section>
+        
+        <!-- Professional Hockey Club Section -->
+        <section class="club-description-section ">
+            <hr class="hr-border mt-20">
+            <div class="club-description-contents mt-10 flex flex-wrap flex-col	 items-center text-center">
+                <h1 class="text-4xl font-semibold">Professional Hockey Club</h1>
+                <p class="w-[50%] my-5 font-normal text-slate-700">Experience the thrill of professional hockey with our exclusive club. Join a community of dedicated fans and witness top-tier athletes compete at the highest level. Elevate your hockey experience with us and be part of the excitement that defines our professional hockey club.</p>
+            </div>
+            <hr class="hr-border">
+
+            <!-- Professional Hockey Club Section -+ Performance Showing Part-->
+            <div class="club-performance-contents flex gap-5 lg:flex-row flex-col my-9">
+                <div class="club-performance-content flex-wrap items-center text-center">
+                    <div class="radial-progress text-red-600" style="--value:87;" role="progressbar">87%</div>
+                    <h4 class="font-medium my-3">Players Facility</h4>
+                    <p class="font-normal text-slate-700">Have good facilities for players which help them to improve their performance.</p>
+                </div>
+                <div class="club-performance-content flex-wrap items-center text-center">
+                    <div class="radial-progress text-green-600" style="--value:95;" role="progressbar">95%</div>
+                    <h4 class="font-medium my-3">Experienced Coach</h4>
+                    <p class="font-normal text-slate-700">A large amount of experienced national and international coaches are available here.</p>
+                </div>
+                <div class="club-performance-content flex-wrap items-center text-center">
+                    <div class="radial-progress text-yellow-600" style="--value:90;" role="progressbar">90%</div>
+                    <h4 class="font-medium my-3">Senior Player</h4>
+                    <p class="font-normal text-slate-700">Has a very good pipeline of seniors player who is able to help the new students.</p>
+                </div>
+                <div class="club-performance-content flex-wrap items-center text-center">
+                    <div class="radial-progress text-blue-500" style="--value:80;" role="progressbar">80%</div>
+                    <h4 class="font-medium my-3">Training Ground</h4>
+                    <p class="font-normal text-slate-700">A fine practice ground is available here which has both indoor and outdoor facilities</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Program Section -->
+        <section class="program-section">
+
+            <hr class="hr-border my-12">
+            <div class="program-section-contents flex flex-wrap flex-col items-center text-center">
+                <h1 class="text-4xl font-semibold">Program Sections</h1>
+                <p class="w-[50%] my-5 font-normal text-slate-700">Explore our diverse program sections at the Hockey Club, offering tailored experiences for players of all skill levels. From elite training programs to youth development initiatives, we're committed to fostering a love for the game. Join us on the ice, where passion, skill, and community converge in our dynamic hockey programs.</p>
+            </div>
+            <hr class="hr-border mb-10">
+
+            <!-- Program Section -+ Card Part  -->
+            <div class="program-section-cards flex flex-wrap gap-4">
+                <div class="program-section-card-contents flex gap-4 flex-col w-full lg:flex-row">
+                    <div class="program-section-card grid flex-grow h-full card rounded-box place-items-center">
+                        <div class="card w-full bg-base-100 shadow-xl image-full">
+                            <figure class="w-full h-full"><img class="w-full h-full" src="./Images/program-1.png" alt="" /></figure>
+                            <div class="card-body">
+                              <h2 class="card-title">Junior Program</h2>
+                              <p>Empower young talents with our Junior Program at the Hockey Club, providing a nurturing environment to develop skills, foster teamwork, and ignite a passion for the sport.</p>
+                              <div class="card-actions">
+                                <button class="btn btn-primary">Buy Now</button>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program-section-card grid flex-grow h-full card rounded-box place-items-center">
+                        <div class="card w-full bg-base-100 shadow-xl image-full">
+                            <figure class="w-full h-"><img class="w-full h-" src="./Images/program-2.png" alt="" /></figure>
+                            <div class="card-body">
+                              <h2 class="card-title">Teenager Program</h2>
+                              <p>Elevate your skills and passion for hockey with our specially curated Teenager Program, designed to nurture young talents and foster a love for the game.</p>
+                              <div class="card-actions">
+                                <button class="btn btn-primary">Buy Now</button>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="program-section-card grid flex-grow h-full card rounded-box place-items-center">
+                    <div class="card w-full bg-base-100 shadow-xl image-full">
+                        <figure><img src="./Images/program-3.png" alt="" /></figure>
+                        <div class="card-body">
+                          <h2 class="card-title">Professional Program</h2>
+                          <p>Elevate your game with our Professional Program at the Hockey Club, where elite coaching and tailored training propel players to new heights of skill and success.</p>
+                          <div class="card-actions">
+                            <button class="btn btn-primary">Buy Now</button>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="new-products-section">
+            <hr class="hr-border my-12">
+            <div class="program-section-contents flex flex-wrap flex-col items-center text-center">
+                <h1 class="text-4xl font-semibold">Our New Products</h1>
+                <p class="w-[50%] my-5 font-normal text-slate-700">Discover our latest arrivals cutting-edge equipment and gear designed to elevate your game. From innovative sticks to high-performance jerseys, gear up with our new products and step onto the ice with confidence.</p>
+            </div>
+            <hr class="hr-border">
+            <div class="new-product-cards">
+                <div class="new-product-card border-orange-600 rounded-lg">
+                    <div class="card card-side bg-base-100 shadow-xl  ">
+                        <figure><img src="./Images/jacket.png" alt="jacket"/></figure>
+                        <div class="card-body">
+                            <div class="new-product-top-icons">
+                                <div class="rating">
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                    <p> 5.0</p>
+                                    <span class="material-symbols-outlined">visibility</span>
+                                    <p> 20</p>
+                                    <span class="material-symbols-outlined">favorite</span>
+                                    <p> 200</p>
+                                </div>
+                            </div>
+                            <h2 class="card-title">Red Jacket V-type</h2>
+                            <p>New jacket arrive. </p>
+                            <div class="card-footer">
+                                <p>Price - $22.00</p>
+                                <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-product-card border-orange-600 rounded-lg">
+                    <div class="card card-side bg-base-100 shadow-xl  ">
+                        <figure><img src="./Images/player-prize.png" alt="jacket"/></figure>
+                        <div class="card-body">
+                            <div class="new-product-top-icons">
+                                <div class="rating">
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                    <p> 5.0</p>
+                                    <span class="material-symbols-outlined">visibility</span>
+                                    <p> 20</p>
+                                    <span class="material-symbols-outlined">favorite</span>
+                                    <p> 200</p>
+                                </div>
+                            </div>
+                            <h2 class="card-title">Player Prize</h2>
+                            <p>New jacket arrive. </p>
+                            <div class="card-footer">
+                                <p>Price - $22.00</p>
+                                <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-product-card border-orange-600 rounded-lg">
+                    <div class="card card-side bg-base-100 shadow-xl  ">
+                        <figure><img src="./Images/cap.png" alt="jacket"/></figure>
+                        <div class="card-body">
+                            <div class="new-product-top-icons">
+                                <div class="rating">
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                    <p> 5.0</p>
+                                    <span class="material-symbols-outlined">visibility</span>
+                                    <p> 20</p>
+                                    <span class="material-symbols-outlined">favorite</span>
+                                    <p> 200</p>
+                                </div>
+                            </div>
+                            <h2 class="card-title">Cap</h2>
+                            <p>New jacket arrive. </p>
+                            <div class="card-footer">
+                                <p>Price - $22.00</p>
+                                <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-product-card border-orange-600 rounded-lg">
+                    <div class="card card-side bg-base-100 shadow-xl ">
+                        <figure><img src="./Images/jersey.png" alt="jacket"/></figure>
+                        <div class="card-body">
+                            <div class="new-product-top-icons">
+                                <div class="rating">
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                    <p> 5.0</p>
+                                    <span class="material-symbols-outlined">visibility</span>
+                                    <p> 20</p>
+                                    <span class="material-symbols-outlined">favorite</span>
+                                    <p> 200</p>
+                                </div>
+                            </div>
+                            <h2 class="card-title">Player Jersey</h2>
+                            <p>New jacket arrive. </p>
+                            <div class="card-footer">
+                                <p>Price - $22.00</p>
+                                <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-product-card border-orange-600 rounded-lg">
+                    <div class="card card-side bg-base-100 shadow-xl  ">
+                        <figure><img src="./Images/player-helmet.png" alt="jacket"/></figure>
+                        <div class="card-body">
+                            <div class="new-product-top-icons">
+                                <div class="rating">
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                    <p> 5.0</p>
+                                    <span class="material-symbols-outlined">visibility</span>
+                                    <p> 20</p>
+                                    <span class="material-symbols-outlined">favorite</span>
+                                    <p> 200</p>
+                                </div>
+                            </div>
+                            <h2 class="card-title">Keeper Helmet</h2>
+                            <p>New jacket arrive. </p>
+                            <div class="card-footer">
+                                <p>Price - $22.00</p>
+                                <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-product-card border-orange-600 rounded-lg">
+                    <div class="card card-side bg-base-100 shadow-xl  ">
+                        <figure><img src="./Images/football.png" alt="jacket"/></figure>
+                        <div class="card-body">
+                            <div class="new-product-top-icons">
+                                <div class="rating">
+                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                    <p> 5.0</p>
+                                    <span class="material-symbols-outlined">visibility</span>
+                                    <p> 20</p>
+                                    <span class="material-symbols-outlined">favorite</span>
+                                    <p> 200</p>
+                                </div>
+                            </div>
+                            <h2 class="card-title">Football</h2>
+                            <p>New jacket arrive. </p>
+                            <div class="card-footer">
+                                <p>Price - $22.00</p>
+                                <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="client-question-section">
+            <hr class="hr-border my-12">
+            <div class="program-section-contents program-section-contents flex flex-wrap flex-col items-center text-center">
+                <h1 class="text-4xl font-semibold">Clients Question</h1>
+                <p class="w-[50%] my-5 font-normal text-slate-700">Our Hockey Club values and prioritizes client satisfaction, ensuring a positive and rewarding experience for every player. We welcome feedback and strive to continuously enhance our services to meet the needs of our valued clients.</p>
+            </div>
+            <hr class="hr-border">
+            <div class="client-question-container bg-base-200 mt-10">
+                <div class="card lg:card-side shadow-xl">
+                    <figure><img src="./Images/question.png" alt="Album"/></figure>
+                    <div class="card-body">
+                        <div class="collapse collapse-plus ">
+                            <input type="radio" name="my-accordion-3" checked="checked" /> 
+                            <div class="collapse-title text-xl font-medium">
+                                Our Equipment
+                            </div>
+                            <div class="collapse-content"> 
+                              <p>Explore top-tier hockey equipment meticulously crafted for performance, durability, and precision at our Hockey Club.</p>
+                            </div>
+                        </div>
+                        <div class="collapse collapse-plus bg-base-200">
+                            <input type="radio" name="my-accordion-3" /> 
+                            <div class="collapse-title text-xl font-medium">
+                                Hockey Training
+                            </div>
+                            <div class="collapse-content"> 
+                              <p>Enhance your skills and performance at the Hockey Club with our specialized training programs designed for players of all levels.</p>
+                            </div>
+                        </div>
+                        <div class="collapse collapse-plus bg-base-200">
+                            <input type="radio" name="my-accordion-3"/> 
+                            <div class="collapse-title text-xl font-medium">
+                                Private Lessons
+                            </div>
+                            <div class="collapse-content"> 
+                              <p>Elevate your skills with personalized attention to our Private Lessons at the Hockey Club offer tailored coaching to enhance your game and unlock your full potential on the ice.</p>
+                            </div>
+                        </div>
+                        <div class="collapse collapse-plus bg-base-200">
+                            <input type="radio" name="my-accordion-3"/> 
+                            <div class="collapse-title text-xl font-medium">
+                                Ski Touring
+                            </div>
+                            <div class="collapse-content"> 
+                              <p>Although ski touring is not directly related to hockey, it's a fantastic cross-training activity that can enhance overall fitness, endurance, and leg strength for hockey players.</p>
+                            </div>
+                        </div>
+                        <div class="collapse collapse-plus bg-base-200">
+                            <input type="radio" name="my-accordion-3"/> 
+                            <div class="collapse-title text-xl font-medium">
+                                Booking
+                            </div>
+                            <div class="collapse-content"> 
+                              <p>Book your spot on the ice and experience the thrill and secure your reservation for Hockey Club activities now!</p>
+                            </div>
+                        </div>
+                        <div class="collapse collapse-plus bg-base-200">
+                            <input type="radio" name="my-accordion-3"/> 
+                            <div class="collapse-title text-xl font-medium">
+                                Pricing
+                            </div>
+                            <div class="collapse-content"> 
+                              <p>For detailed pricing information, please visit our official Hockey Club website or contact our customer service for personalized assistance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+
+        <section class="get-in-touch-section">
+            <hr class="hr-border">
+            <div class="program-section-contents">
+                <h1>Get In Touch</h1>
+                <p>Connect with our Hockey Club to explore exciting opportunities, discuss partnerships, or address any inquiries. We're dedicated to fostering collaboration and engagement within the hockey community.</p>
+            </div>
+            <hr class="hr-border">
+
+            <div class="hero min-h-screen bg-base-200">
+                <div class="hero-content flex-col lg:flex-row">
+                  <div class="text-center lg:text-left">
+                    <div class="card lg:card-side shadow-xl">
+                        <div class="get-in-touch-left p-6">
+                            <div class="get-in-touch-contact">
+                                <img src="./Images/call-icon.png" alt="">
+                                <p>Phone Number</p>
+                                <p>(+880) 1525354565</p>
+                            </div>
+                            <div class="get-in-touch-contact">
+                                <img src="./Images/message-icon.png" alt="">
+                                <p>Email</p>
+                                <p>hockey@gmail.com</p>
+                            </div>
+                            <div class="get-in-touch-contact">
+                                <img src="./Images/location-icon.png" alt="">
+                                <p>Location</p>
+                                <p>152/1, Wireless, Mogbazar, Dhaka-1217</p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Name</span>
+                        </label>
+                        <input type="text" placeholder="Enter your full name" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Email</span>
+                        </label>
+                        <input type="email" placeholder="email" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Subject</span>
+                        </label>
+                        <input type="text" placeholder="Enter your subject" class="input input-bordered" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Phone Number</span>
+                        </label>
+                        <input type="text" placeholder="Enter your phone number" class="input input-bordered" required />
+                      </div>
+
+                      <div class="form-control flex flex-nowrap">
+                            <label class="label">
+                                <span class="label-text">Message</span>
+                            </label>
+                            <textarea placeholder="Bio" class="textarea textarea-bordered textarea-xs w-full h-32 resize-none" ></textarea>
+                        </div>
+                      <div class="form-control mt-6">
+                        <button class="btn btn-primary bg-red-600 border-none">Login</button>
+                      </div>
+                    </form>
+                  </div>
+                    
+                </div>
+            </div>
+
+            
+        </section>
+
+
+        <section class="social-media text-base-content flex flex-wrap items-center flex-col gap-2">
+            <header class="footer-title">Social Media</header> 
+            <div class="flex gap-4">
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer p-14 bg-slate-900	text-white text-base-content">
+        <aside >
+          <h1>Get In Touch</h1>
+          <p >Connect with our Hockey Club to explore exciting opportunities, discuss partnerships, or address any inquiries. We're dedicated to fostering collaboration and engagement within the hockey community.</p>
+          <div class="footer-email flex gap-2">
+            <span class="material-symbols-outlined text-red-700 ">mail</span>
+            <p>hockey@gmail.com</p>
+          </div>
+          <div class="footer-call flex gap-2">
+            <span class="material-symbols-outlined text-red-700">call</span>
+            <p>(+880) 1525354565</p>
+          </div>
+        </aside> 
+        <nav>
+          <header class="">Company</header> 
+          <a class="link link-hover">About us</a>
+          <a class="link link-hover">Leadership</a>
+          <a class="link link-hover">Careers</a>
+          <a class="link link-hover">News & Articles</a>
+          <a class="link link-hover">Legal Notice</a>
+        </nav> 
+        <nav>
+          <header class="">Support</header> 
+          <a class="link link-hover">Help Center</a>
+          <a class="link link-hover">FAQ</a>
+          <a class="link link-hover">Ticket Support</a>
+          <a class="link link-hover">Contact Us</a>
+        </nav> 
+        <nav>
+          <header class="footer-title">Services</header> 
+          <a class="link link-hover">Academy</a>
+          <a class="link link-hover">Group Lesson</a>
+          <a class="link link-hover">Private Lesson</a>
+          <a class="link link-hover">Hockey for Kids</a>
+          <a class="link link-hover">Hockey for Adult</a>
+        </nav>
+    </footer>
+</body>
+</html>
