@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Hockey Club</title>
+
+    <!-- Tailwind and DaisyUI link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <!-- Google icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+    <!-- Custom CSS -->
+    <style>
+        /*
+        .navbar-items{
+            display: flex;
+            justify-content: space-between;
+        }*/
+        .carousel-size{
+            height: 700px !important;
+        }
+        .hr-border{
+            border: 1px dashed #e0e0e0;
+            size: 6;
+        }
+        .active{
+            color: #fa0000 !important;
+            background: none!important;
+        }
+        .banner-content{
+            position: absolute;
+            z-index: 9999;
+            bottom: 30px;
+            right: 30px;
+        }
+    </style>
+
+</head>
+
+<body >
+
+    <!-- Navbar -->
+    <nav class="lg:mx-20 mt-5">
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <!-- Small screen menu start -->
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./pages.html">Pages</a></li>
+                        <li><a href="./blog.html" class="active">Blog</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                  </div>
+                    <!-- Small screen menu end -->
+    
+                  <!-- Apostrophe is not showing -->
+                  <a href="./index.html"><span style="color: #fa0000; gap:0" class="text-2xl">Dream</span> <span class="font-normal">Hockey</span></a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1 ">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./pages.html">Pages</a></li>
+                    <li><a href="./blog.html" class="active">Blog</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                  </ul>
+            </div>
+            <div class="navbar-end">
+                <!-- Overlap for Mobile-s -->
+                <button class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                </button>
+                <a class="btn bg-[#FF4240] text-slate-50">Get Ticket</a>
+            </div>
+        </div>
+    </nav>
+
+    <footer class="footer  p-14 bg-slate-900	text-white text-base-content flex flex-col lg:flex-row items-center  gap-20">
+        <aside class="flex flex-col gap-8 10 w-[50%]">
+          <h1 class="lg:text-2xl text-lg font-semibold ">Get In Touch</h1>
+          <p class="font-normal text-slate-400">Connect with our Hockey Club to explore exciting opportunities, discuss partnerships, or address any inquiries. We're dedicated to fostering collaboration and engagement within the hockey community.</p>
+          <div class="footer-email flex gap-2">
+            <span class="material-symbols-outlined text-red-700 ">mail</span>
+            <p>hockey@gmail.com</p>
+          </div>
+          <div class="footer-call flex gap-2">
+            <span class="material-symbols-outlined text-red-700">call</span>
+            <p>(+880) 1525354565</p>
+          </div>
+        </aside> 
+
+        <div class="flex flex-wrap flex-row items-center justify-center  gap-5 w-[100%]">
+            
+            <nav class="flex flex-col  justify-center lg:basis-[33%] basis-[45%] space-y-3">
+                <header class="text-white font-semibold mb-5">Company</header> 
+                <a class="link link-hover font-normal text-slate-400">About us</a>
+                <a class="link link-hover font-normal text-slate-400">Leadership</a>
+                <a class="link link-hover font-normal text-slate-400">Careers</a>
+                <a class="link link-hover font-normal text-slate-400">News & Articles</a>
+                <a class="link link-hover font-normal text-slate-400">Legal Notice</a>
+            </nav> 
+            <nav class="flex flex-col  justify-center lg:basis-[33%] sm:basis-[45%] space-y-3 mb-5">
+                <header class="text-white font-semibold mb-5">Support</header> 
+                <a class="link link-hover font-normal text-slate-400">Help Center</a>
+                <a class="link link-hover font-normal text-slate-400">FAQ</a>
+                <a class="link link-hover font-normal text-slate-400">Ticket Support</a>
+                <a class="link link-hover font-normal text-slate-400">Contact Us</a>
+            </nav> 
+            <nav class="flex flex-col space-y-3  justify-center">
+                <header class="text-white font-semibold mb-5">Services</header> 
+                <a class="link link-hover font-normal text-slate-400">Academy</a>
+                <a class="link link-hover font-normal text-slate-400">Group Lesson</a>
+                <a class="link link-hover font-normal text-slate-400">Private Lesson</a>
+                <a class="link link-hover font-normal text-slate-400">Hockey for Kids</a>
+                <a class="link link-hover font-normal text-slate-400">Hockey for Adult</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

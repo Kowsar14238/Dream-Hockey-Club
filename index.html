@@ -15,6 +15,9 @@
     <!-- Google icon -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
     <!-- Custom CSS -->
     <style>
         /*
@@ -22,6 +25,9 @@
             display: flex;
             justify-content: space-between;
         }*/
+        .carousel-size{
+            height: 700px !important;
+        }
         .hr-border{
             border: 1px dashed #e0e0e0;
             size: 6;
@@ -29,6 +35,12 @@
         .active{
             color: #fa0000 !important;
             background: none!important;
+        }
+        .banner-content{
+            position: absolute;
+            z-index: 9999;
+            bottom: 30px;
+            right: 30px;
         }
     </style>
 
@@ -46,25 +58,25 @@
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </div>
                 <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="./index.html" class="active">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./pages.html">Pages</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
                 </ul>
               </div>
                 <!-- Small screen menu end -->
 
               <!-- Apostrophe is not showing -->
-              <a ><span style="color: #fa0000; gap:0" class="text-2xl">Dream</span> <span class="font-normal">Hockey</span></a>
+              <a href="./index.html"><span style="color: #fa0000; gap:0" class="text-2xl">Dream</span> <span class="font-normal">Hockey</span></a>
             </div>
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal px-1 ">
-                <li><a href="#" class="active ">Home</a></li>
-                <li><a href="#" >About</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="./about.html" >About</a></li>
+                <li><a href="./pages.html">Pages</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contact</a></li>
               </ul>
             </div>
             <div class="navbar-end">
@@ -77,37 +89,56 @@
         </div>
     </nav>
 
-    <main class="lg:mx-20 mt-5">
-        <!-- Banner Section -->
-        <section class="body-banner-section">
-            <!-- <div class="banner-content bg-black text-white h-[10%] w-[20%] p-[2%]">
-                <h2>Meet all the heroes from the field</h2>
-                <p>Here is our heros.</p>
-            </div> -->
-            <div class="carousel w-full">
-                <div id="slide1" class="carousel-item relative w-full h-[700px]">
-                  <img src="./Images/banner.png" class="w-full" />
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide4" class="btn btn-circle">❮</a> 
-                    <a href="#slide2" class="btn btn-circle">❯</a>
-                  </div>
-                </div> 
-                <div id="slide2" class="carousel-item relative w-full h-[700px]">
-                  <img src="./Images/program-2.png" class="w-full" />
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" class="btn btn-circle">❮</a> 
-                    <a href="#slide3" class="btn btn-circle">❯</a>
-                  </div>
-                </div> 
-                <div id="slide3" class="carousel-item relative w-full h-[700px]">
-                  <img src="./Images/program-3.png" class="w-full" />
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" class="btn btn-circle">❮</a> 
-                    <a href="#slide1" class="btn btn-circle">❯</a>
-                  </div>
-                </div> 
-              </div>
-        </section>
+    <main class="lg:mx-20 mt-5 sm:mx-15">
+        
+        <!-- Banner Part -->
+        <div id="default-carousel" class="relative w-full" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class=" relative overflow-hidden carousel-size rounded-lg md:h-96">
+                
+                <!-- Item 1 -->
+                <div class="hidden lg:h-full duration-700 ease-in-out" data-carousel-item>
+                    <img src="./Images/program-1.png" class="absolute block w-full lg:h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden lg:h-full duration-700 ease-in-out" data-carousel-item>
+                    <img src="./Images/program-2.png" class="absolute block w-full lg:h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden lg:h-full duration-700 ease-in-out" data-carousel-item>
+                    <img src="./Images/program-3.png" class="absolute block w-full lg:h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                </div>
+                <!-- <div class="banner-content bg-black text-white h-[10%] w-[40%] p-[2%]">
+                    <h2>Meet all the heroes from the field</h2>
+                    <p>Here is our heros. They are the king of the club. Our achievements are our proud</p>
+                </div> -->
+            </div>
+
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+            </div>
+            
+            <!-- Slider controls -->
+            <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+        </div>
         
         <!-- Professional Hockey Club Section -->
         <section class="club-description-section ">
@@ -215,146 +246,155 @@
             <hr class="hr-border mx-4">
 
             <!-- Product Section -+ Cards -->
-            <div class="new-product-cards flex flex-wrap flex-col lg:flex-row gap-4 mt-12">
-                <div class="new-product-card border-orange-600 rounded-lg lg:basis-[49.5%]">
-                    <div class="card card-side bg-base-100 shadow-xl  p-4 border-2">
-                        <figure><img src="./Images/jacket.png" alt="jacket"/></figure>
-                        <div class="card-body">
-                            <div class="new-product-top-icons">
-                                <div class="rating flex">
-                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
-                                    <p> 5.0</p>
-                                    <span class="material-symbols-outlined">visibility</span>
-                                    <p> 20</p>
-                                    <span class="material-symbols-outlined">favorite</span>
-                                    <p> 200</p>
+            <div class="flex-colm">
+                <div class="new-product-cards flex flex-wrap flex-col lg:flex-row gap-4 mt-12">
+                    <div class="new-product-card border-orange-600 rounded-lg lg:basis-[49%]">
+                        <div class="card card-side bg-base-100 shadow-xl  p-4 border-2">
+                            <figure><img src="./Images/jacket.png" alt="jacket"/></figure>
+                            <div class="card-body">
+                                <div class="new-product-top-icons">
+                                    <div class="rating flex">
+                                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                        <p> 5.0</p>
+                                        <span class="material-symbols-outlined">visibility</span>
+                                        <p> 20</p>
+                                        <span class="material-symbols-outlined">favorite</span>
+                                        <p> 200</p>
+                                    </div>
+                                </div>
+                                <h2 class="card-title text-2xl font-semibold">Red Jacket V-type</h2>
+                                <p class="font-normal text-slate-700">New jacket arrive. </p>
+                                <div class="card-footer flex flex-wrap lg:flex-row">
+                                    <p class="text-red-500 font-bold">Price - $22.00</p>
+                                    <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
                                 </div>
                             </div>
-                            <h2 class="card-title text-2xl font-semibold">Red Jacket V-type</h2>
-                            <p class="font-normal text-slate-700">New jacket arrive. </p>
-                            <div class="card-footer flex">
-                                <p class="text-red-500 font-bold">Price - $22.00</p>
-                                <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
+                        </div>
+                    </div>
+                    <div class="new-product-card border-orange-600 rounded-lg lg:basis-[49%]">
+                        <div class="card card-side bg-base-100 shadow-xl  p-4 border-2">
+                            <figure><img src="./Images/player-prize.png" alt="jacket"/></figure>
+                            <div class="card-body">
+                                <div class="new-product-top-icons">
+                                    <div class="rating flex">
+                                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                        <p> 5.0</p>
+                                        <span class="material-symbols-outlined">visibility</span>
+                                        <p> 20</p>
+                                        <span class="material-symbols-outlined">favorite</span>
+                                        <p> 200</p>
+                                    </div>
+                                </div>
+                                <h2 class="card-title text-2xl font-semibold">Player Prize</h2>
+                                <p class="font-normal text-slate-700">New prize arrive. </p>
+                                <div class="card-footer flex flex-wrap lg:flex-row">
+                                    <p class="text-red-500 font-bold">Price - $22.00</p>
+                                    <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="new-product-card border-orange-600 rounded-lg lg:basis-[49.5%]">
-                    <div class="card card-side bg-base-100 shadow-xl  p-4 border-2">
-                        <figure><img src="./Images/player-prize.png" alt="jacket"/></figure>
-                        <div class="card-body">
-                            <div class="new-product-top-icons">
-                                <div class="rating flex">
-                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
-                                    <p> 5.0</p>
-                                    <span class="material-symbols-outlined">visibility</span>
-                                    <p> 20</p>
-                                    <span class="material-symbols-outlined">favorite</span>
-                                    <p> 200</p>
+
+                <div class="new-product-cards flex flex-wrap flex-col lg:flex-row gap-4 mt-12">
+                    <div class="new-product-card border-orange-600 rounded-lg lg:basis-[49%]">
+                        <div class="card card-side bg-base-100 shadow-xl  p-4 border-2">
+                            <figure><img src="./Images/cap.png" alt="jacket"/></figure>
+                            <div class="card-body">
+                                <div class="new-product-top-icons">
+                                    <div class="rating flex">
+                                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                        <p> 5.0</p>
+                                        <span class="material-symbols-outlined">visibility</span>
+                                        <p> 20</p>
+                                        <span class="material-symbols-outlined">favorite</span>
+                                        <p> 200</p>
+                                    </div>
+                                </div>
+                                <h2 class="card-title text-2xl font-semibold">Cap</h2>
+                                <p class="font-normal text-slate-700">New cap arrive. </p>
+                                <div class="card-footer flex flex-wrap lg:flex-row">
+                                    <p class="text-red-500 font-bold">Price - $22.00</p>
+                                    <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
                                 </div>
                             </div>
-                            <h2 class="card-title text-2xl font-semibold">Player Prize</h2>
-                            <p class="font-normal text-slate-700">New prize arrive. </p>
-                            <div class="card-footer flex">
-                                <p class="text-red-500 font-bold">Price - $22.00</p>
-                                <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
+                        </div>
+                    </div>
+                    <div class="new-product-card border-orange-600 rounded-lg lg:basis-[49%]">
+                        <div class="card card-side bg-base-100 shadow-xl p-4 border-2">
+                            <figure><img src="./Images/jersey.png" alt="jacket"/></figure>
+                            <div class="card-body">
+                                <div class="new-product-top-icons">
+                                    <div class="rating flex">
+                                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                        <p> 5.0</p>
+                                        <span class="material-symbols-outlined">visibility</span>
+                                        <p> 20</p>
+                                        <span class="material-symbols-outlined">favorite</span>
+                                        <p> 200</p>
+                                    </div>
+                                </div>
+                                <h2 class="card-title text-2xl font-semibold">Player Jersey</h2>
+                                <p class="font-normal text-slate-700">New jersy arrive. </p>
+                                <div class="card-footer flex flex-wrap lg:flex-row">
+                                    <p class="text-red-500 font-bold">Price - $22.00</p>
+                                    <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="new-product-card border-orange-600 rounded-lg lg:basis-[49.5%]">
-                    <div class="card card-side bg-base-100 shadow-xl  p-4 border-2">
-                        <figure><img src="./Images/cap.png" alt="jacket"/></figure>
-                        <div class="card-body">
-                            <div class="new-product-top-icons">
-                                <div class="rating flex">
-                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
-                                    <p> 5.0</p>
-                                    <span class="material-symbols-outlined">visibility</span>
-                                    <p> 20</p>
-                                    <span class="material-symbols-outlined">favorite</span>
-                                    <p> 200</p>
+
+                <div class="new-product-cards flex flex-wrap flex-col lg:flex-row gap-4 mt-12">
+                    <div class="new-product-card border-orange-600 rounded-lg lg:basis-[49%]">
+                        <div class="card card-side bg-base-100 shadow-xl  p-4 border-2">
+                            <figure><img src="./Images/player-helmet.png" alt="jacket"/></figure>
+                            <div class="card-body">
+                                <div class="new-product-top-icons">
+                                    <div class="rating flex">
+                                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                        <p> 5.0</p>
+                                        <span class="material-symbols-outlined">visibility</span>
+                                        <p> 20</p>
+                                        <span class="material-symbols-outlined">favorite</span>
+                                        <p> 200</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <h2 class="card-title text-2xl font-semibold">Cap</h2>
-                            <p class="font-normal text-slate-700">New cap arrive. </p>
-                            <div class="card-footer flex">
-                                <p class="text-red-500 font-bold">Price - $22.00</p>
-                                <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
+                                <h2 class="card-title text-2xl font-semibold">Keeper Helmet</h2>
+                                <p class="font-normal text-slate-700">New helmet arrive. </p>
+                                <div class="card-footer flex flex-wrap lg:flex-row">
+                                    <p class="text-red-500 font-bold">Price - $22.00</p>
+                                    <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="new-product-card border-orange-600 rounded-lg lg:basis-[49.5%]">
-                    <div class="card card-side bg-base-100 shadow-xl p-4 border-2">
-                        <figure><img src="./Images/jersey.png" alt="jacket"/></figure>
-                        <div class="card-body">
-                            <div class="new-product-top-icons">
-                                <div class="rating flex">
-                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
-                                    <p> 5.0</p>
-                                    <span class="material-symbols-outlined">visibility</span>
-                                    <p> 20</p>
-                                    <span class="material-symbols-outlined">favorite</span>
-                                    <p> 200</p>
+                    <div class="new-product-card border-orange-600 rounded-lg lg:basis-[49%]">
+                        <div class="card card-side bg-base-100 shadow-xl  p-4 border-2">
+                            <figure><img src="./Images/football.png" alt="jacket"/></figure>
+                            <div class="card-body">
+                                <div class="new-product-top-icons">
+                                    <div class="rating flex ">
+                                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                                        <p> 5.0</p>
+                                        <span class="material-symbols-outlined">visibility</span>
+                                        <p> 20</p>
+                                        <span class="material-symbols-outlined">favorite</span>
+                                        <p> 200</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <h2 class="card-title text-2xl font-semibold">Player Jersey</h2>
-                            <p class="font-normal text-slate-700">New jersy arrive. </p>
-                            <div class="card-footer flex">
-                                <p class="text-red-500 font-bold">Price - $22.00</p>
-                                <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="new-product-card border-orange-600 rounded-lg lg:basis-[49.5%]">
-                    <div class="card card-side bg-base-100 shadow-xl  p-4 border-2">
-                        <figure><img src="./Images/player-helmet.png" alt="jacket"/></figure>
-                        <div class="card-body">
-                            <div class="new-product-top-icons">
-                                <div class="rating flex">
-                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
-                                    <p> 5.0</p>
-                                    <span class="material-symbols-outlined">visibility</span>
-                                    <p> 20</p>
-                                    <span class="material-symbols-outlined">favorite</span>
-                                    <p> 200</p>
+                                <h2 class="card-title text-2xl font-semibold">Football</h2>
+                                <p class="font-normal text-slate-700">New football arrive. </p>
+                                <div class="card-footer flex flex-wrap lg:flex-row">
+                                    <p class="text-red-500 font-bold">Price - $22.00</p>
+                                    <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
                                 </div>
-                            </div>
-                            <h2 class="card-title text-2xl font-semibold">Keeper Helmet</h2>
-                            <p class="font-normal text-slate-700">New helmet arrive. </p>
-                            <div class="card-footer flex">
-                                <p class="text-red-500 font-bold">Price - $22.00</p>
-                                <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="new-product-card border-orange-600 rounded-lg lg:basis-[49.5%]">
-                    <div class="card card-side bg-base-100 shadow-xl  p-4 border-2">
-                        <figure><img src="./Images/football.png" alt="jacket"/></figure>
-                        <div class="card-body">
-                            <div class="new-product-top-icons">
-                                <div class="rating flex ">
-                                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
-                                    <p> 5.0</p>
-                                    <span class="material-symbols-outlined">visibility</span>
-                                    <p> 20</p>
-                                    <span class="material-symbols-outlined">favorite</span>
-                                    <p> 200</p>
-                                </div>
-                            </div>
-                            <h2 class="card-title text-2xl font-semibold">Football</h2>
-                            <p class="font-normal text-slate-700">New football arrive. </p>
-                            <div class="card-footer flex">
-                                <p class="text-red-500 font-bold">Price - $22.00</p>
-                                <p><span class="material-symbols-outlined">shopping_cart</span> Delivery Fee : Free</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </section>
 
         <!-- Client Question Section -->
