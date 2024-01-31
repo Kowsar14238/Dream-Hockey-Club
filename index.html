@@ -34,10 +34,10 @@
 
 </head>
 
-<body class="lg:mx-20 mt-5">
+<body >
 
     <!-- Navbar -->
-    <nav>
+    <nav class="lg:mx-20 mt-5">
         <div class="navbar bg-base-100">
             <div class="navbar-start">
                 <!-- Small screen menu start -->
@@ -77,7 +77,7 @@
         </div>
     </nav>
 
-    <main>
+    <main class="lg:mx-20 mt-5">
         <!-- Banner Section -->
         <section class="body-banner-section">
             <!-- <div class="banner-content bg-black text-white h-[10%] w-[20%] p-[2%]">
@@ -429,7 +429,7 @@
             
         </section>
 
-
+        <!-- Get In Touch Section -->
         <section class="get-in-touch-section">
             <hr class="hr-border my-12">
             <div class="program-section-contents flex flex-wrap flex-col items-center text-center">
@@ -438,9 +438,9 @@
             </div>
             <hr class="hr-border">
 
-            <div class="hero min-h-screen bg-base-200">
+            <div class="hero min-h-screen ">
                 <div class="hero-content flex-col lg:flex-row ">
-                  <div class="text-center lg:text-left lg:flex-wrap">
+                  <div class="text-center lg:text-left lg:flex-wrap lg:gap-8">
                     <div class="card lg:card-side shadow-xl ">
                         <div class="get-in-touch-left p-6">
                             <div class="get-in-touch-contact">
@@ -461,7 +461,7 @@
                         </div>
                     </div>
                   </div>
-                  <div class="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
+                  <div class="card shrink-0 w-full max-w-lg shadow-2xl border-none">
                     <form class="card-body">
                       <div class="form-control">
                         <label class="label">
@@ -507,7 +507,7 @@
         </section>
 
 
-        <section class="social-media text-base-content flex flex-wrap items-center flex-col gap-2">
+        <section class="social-media bg-base-200 my-6 p-3 text-base-content flex flex-wrap items-center flex-col gap-2">
             <header class="footer-title">Social Media</header> 
             <div class="flex gap-4">
                 <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
@@ -518,10 +518,10 @@
 
     </main>
 
-    <footer class="footer p-14 bg-slate-900	text-white text-base-content flex items-center  gap-20">
-        <aside class="flex flex-col gap-5 10 w-[50%]">
-          <h1 class="text-2xl font-semibold">Get In Touch</h1>
-          <p >Connect with our Hockey Club to explore exciting opportunities, discuss partnerships, or address any inquiries. We're dedicated to fostering collaboration and engagement within the hockey community.</p>
+    <footer class="footer  p-14 bg-slate-900	text-white text-base-content flex flex-col lg:flex-row items-center  gap-20">
+        <aside class="flex flex-col gap-8 10 w-[50%]">
+          <h1 class="lg:text-2xl text-lg font-semibold ">Get In Touch</h1>
+          <p class="font-normal text-slate-400">Connect with our Hockey Club to explore exciting opportunities, discuss partnerships, or address any inquiries. We're dedicated to fostering collaboration and engagement within the hockey community.</p>
           <div class="footer-email flex gap-2">
             <span class="material-symbols-outlined text-red-700 ">mail</span>
             <p>hockey@gmail.com</p>
@@ -531,29 +531,33 @@
             <p>(+880) 1525354565</p>
           </div>
         </aside> 
-        <nav>
-          <header class="footer-title">Company</header> 
-          <a class="link link-hover">About us</a>
-          <a class="link link-hover">Leadership</a>
-          <a class="link link-hover">Careers</a>
-          <a class="link link-hover">News & Articles</a>
-          <a class="link link-hover">Legal Notice</a>
-        </nav> 
-        <nav>
-          <header class="footer-title">Support</header> 
-          <a class="link link-hover">Help Center</a>
-          <a class="link link-hover">FAQ</a>
-          <a class="link link-hover">Ticket Support</a>
-          <a class="link link-hover">Contact Us</a>
-        </nav> 
-        <nav>
-          <header class="footer-title">Services</header> 
-          <a class="link link-hover">Academy</a>
-          <a class="link link-hover">Group Lesson</a>
-          <a class="link link-hover">Private Lesson</a>
-          <a class="link link-hover">Hockey for Kids</a>
-          <a class="link link-hover">Hockey for Adult</a>
-        </nav>
+
+        <div class="flex flex-wrap flex-row items-center justify-center  gap-5 w-[100%]">
+            
+            <nav class="flex flex-col  justify-center lg:basis-[33%] basis-[45%] space-y-3">
+                <header class="text-white font-semibold mb-5">Company</header> 
+                <a class="link link-hover font-normal text-slate-400">About us</a>
+                <a class="link link-hover font-normal text-slate-400">Leadership</a>
+                <a class="link link-hover font-normal text-slate-400">Careers</a>
+                <a class="link link-hover font-normal text-slate-400">News & Articles</a>
+                <a class="link link-hover font-normal text-slate-400">Legal Notice</a>
+            </nav> 
+            <nav class="flex flex-col  justify-center lg:basis-[33%] sm:basis-[45%] space-y-3 mb-5">
+                <header class="text-white font-semibold mb-5">Support</header> 
+                <a class="link link-hover font-normal text-slate-400">Help Center</a>
+                <a class="link link-hover font-normal text-slate-400">FAQ</a>
+                <a class="link link-hover font-normal text-slate-400">Ticket Support</a>
+                <a class="link link-hover font-normal text-slate-400">Contact Us</a>
+            </nav> 
+            <nav class="flex flex-col space-y-3  justify-center">
+                <header class="text-white font-semibold mb-5">Services</header> 
+                <a class="link link-hover font-normal text-slate-400">Academy</a>
+                <a class="link link-hover font-normal text-slate-400">Group Lesson</a>
+                <a class="link link-hover font-normal text-slate-400">Private Lesson</a>
+                <a class="link link-hover font-normal text-slate-400">Hockey for Kids</a>
+                <a class="link link-hover font-normal text-slate-400">Hockey for Adult</a>
+            </nav>
+        </div>
     </footer>
 </body>
 </html>
